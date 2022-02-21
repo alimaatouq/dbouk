@@ -1,6 +1,5 @@
 from email import header
 from optparse import Values
-from turtle import width
 import pandas as pd
 import numpy as np
 
@@ -32,7 +31,6 @@ st.title("""Please mark the assignmnet after you're done using the slider below"
 st.subheader("slide here")
 x = st.slider("A number between 0-100")
 st.write("Grade:", x)
-
 
 st.header("""A better overview of the essential columns of the data""")
 import plotly.figure_factory as ff
@@ -105,7 +103,6 @@ if rad == "3D scatter plot":
     trace = go.Scatter3d(x=x,y=y,z=z, mode ='markers',marker =dict(size=12,color=z,colorscale='Viridis',opacity=0.8))
     data = [trace]
     layout = go.Layout(margin = dict(l=0,r=0,b=0,t=0))
-
     fig7 = go.Figure(data=data, layout = layout)
     st.plotly_chart(fig7)
 
